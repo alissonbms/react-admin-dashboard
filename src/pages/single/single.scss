@@ -79,7 +79,15 @@
               .itemValue {
                 font-weight: 300;
               }
+
+              @media only screen and (max-width: 380px) {
+                flex-wrap: wrap;
+              }
             }
+          }
+
+          @media only screen and (max-width: 280px) {
+            flex-wrap: wrap;
           }
         }
       }

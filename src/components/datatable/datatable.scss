@@ -27,6 +27,12 @@
       font-weight: bold;
       cursor: pointer;
     }
+
+    @media only screen and (max-width: 355px) {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
   }
 
   .cellWithImg {
