@@ -7,11 +7,6 @@
   background-color: #fff;
   height: 100%;
 
-  // @media only screen and (max-width: 1000px) {
-  //   position: absolute;
-  //   z-index: 99;
-  // }
-
   .center {
     padding-top: 7px;
     padding-left: 20px;
@@ -29,7 +24,6 @@
         transition: 0.3s;
 
         &:hover {
-          //background-color: #ece8ff;
           background-color: rgba(100, 57, 255, 0.15);
         }
 
@@ -57,11 +51,10 @@
     }
   }
 
-  .bottom {
+  .bottomSidebar {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    //align-items: center;
     margin: 50px 20px;
 
     .colorOption {
@@ -102,12 +95,8 @@
       }
 
       &:hover {
-        //background-color: #ece8ff;
         background-color: rgba(100, 57, 255, 0.15);
       }
     }
-  }
-
-  @media only screen and (max-width: 1000px) {
   }
 }

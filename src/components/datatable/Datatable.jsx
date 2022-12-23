@@ -5,39 +5,46 @@ import { Link } from "react-router-dom";
 import "./datatable.scss";
 
 //Utilities
-import { userColumns, userRows } from "../../datatableSource";
 
-const actionColumn = [
-  {
-    field: "action",
-    headerName: "Action",
-    width: 300,
-    sortable: false,
-    renderCell: () => {
-      return (
-        <div className="cellAction">
-          <Link to="/users/test" style={{ textDecoration: "none" }}>
-            <div className="viewButton">View</div>
-          </Link>
-          <div className="deleteButton">Delete</div>
-        </div>
-      );
+const Datatable = ({ dataRows, dataColumns, title }) => {
+  const actionColumn = [
+    {
+      field: "action",
+      headerName: "Action",
+      width: 300,
+      sortable: false,
+      renderCell: () => {
+        return (
+          <div className="cellAction">
+            {title === "Users" ? (
+              <Link to="/users/test" style={{ textDecoration: "none" }}>
+                <div className="viewButton">View</div>
+              </Link>
+            ) : (
+              <div className="viewButton">Edit</div>
+            )}
+            <div className="deleteButton">Delete</div>
+          </div>
+        );
+      },
     },
-  },
-];
+  ];
 
-const Datatable = () => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        <h1>Users</h1>
-        <Link to="/users/new" className="addButton">
+        <h1>{title}</h1>
+        <Link
+          to={title === "Users" ? "/users/new" : "/products/new"}
+          className="addButton"
+        >
           Add new
         </Link>
       </div>
       <DataGrid
-        rows={userRows}
-        columns={userColumns.concat(actionColumn)}
+        className="datagrid"
+        rows={dataRows}
+        columns={dataColumns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[8]}
         checkboxSelection

@@ -12,13 +12,26 @@ import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
 import { Link } from "react-router-dom";
 
 //Styles
 import "./sidebar.scss";
+import { useContext } from "react";
+import { DarkModeContext } from "../../contexts/DarkModeContext";
 
 const Sidebar = () => {
+  const { dispatch } = useContext(DarkModeContext);
+
+  const handleDarkMode = () => {
+    dispatch({ type: "DARK" });
+    document.body.style.backgroundColor = "#111";
+  };
+
+  const handleLightMode = () => {
+    dispatch({ type: "LIGHT" });
+    document.body.style.backgroundColor = "#fff";
+  };
+
   return (
     <div className="sidebar">
       <div className="center">
@@ -87,12 +100,12 @@ const Sidebar = () => {
         </ul>
       </div>
 
-      <div className="bottom">
-        <div className="colorOption">
+      <div className="bottomSidebar">
+        <div onClick={handleLightMode} className="colorOption">
           <span>LightMode</span>
           <LightModeIcon className="icon" />
         </div>
-        <div className="colorOption">
+        <div onClick={handleDarkMode} className="colorOption">
           <span>DarkMode</span>
           <DarkModeIcon className="icon" />
         </div>

@@ -1,9 +1,10 @@
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import PersonIcon from "@mui/icons-material/Person";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import InventoryIcon from "@mui/icons-material/Inventory";
+import { Link } from "react-router-dom";
 
 //Styles
 import "./widget.scss";
@@ -20,7 +21,11 @@ const Widget = ({ type }) => {
       data = {
         title: "users",
         isMoney: false,
-        link: "See all users",
+        link: (
+          <Link className="linkRouter" to={"/users"}>
+            See all users
+          </Link>
+        ),
         icon: (
           <PersonOutlinedIcon
             className="icon"
@@ -36,13 +41,17 @@ const Widget = ({ type }) => {
       data = {
         title: "products",
         isMoney: false,
-        link: "See all products",
+        link: (
+          <Link className="linkRouter" to={"/products"}>
+            See all products
+          </Link>
+        ),
         icon: (
-          <PersonOutlinedIcon
+          <InventoryIcon
             className="icon"
             style={{
-              color: "crimson",
-              backgroundColor: "rgba(255, 0, 0, 0.2)",
+              color: "teal",
+              backgroundColor: "rgba(0,128,128, 0.2)",
             }}
           />
         ),
@@ -52,7 +61,7 @@ const Widget = ({ type }) => {
       data = {
         title: "orders",
         isMoney: false,
-        link: "See all orders",
+        link: <span className="link">See all orders</span>,
         icon: (
           <ShoppingCartOutlinedIcon
             className="icon"
@@ -68,7 +77,7 @@ const Widget = ({ type }) => {
       data = {
         title: "earnings",
         isMoney: true,
-        link: "See net earnings",
+        link: <span className="link">See net earnings</span>,
         icon: (
           <MonetizationOnOutlinedIcon
             className="icon"
@@ -81,7 +90,7 @@ const Widget = ({ type }) => {
       data = {
         title: "balance",
         isMoney: true,
-        link: "See details",
+        link: <span className="link">See details</span>,
         icon: (
           <AccountBalanceWalletOutlinedIcon
             className="icon"
@@ -103,7 +112,7 @@ const Widget = ({ type }) => {
         <span className="counter">
           {data.isMoney && "$"} {amount}
         </span>
-        <span className="link">{data.link}</span>
+        {data.link}
       </div>
       <div className="right">
         <div className="percentage positive">

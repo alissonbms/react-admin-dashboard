@@ -46,7 +46,8 @@
     padding: 5px;
     border-radius: 5px;
 
-    &.active {
+    &.active,
+    &.in {
       color: green;
       background-color: rgba(0, 128, 0, 0.151);
     }
@@ -54,7 +55,8 @@
       color: goldenrod;
       background-color: rgba(189, 189, 3, 0.103);
     }
-    &.passive {
+    &.passive,
+    &.out {
       color: crimson;
       background-color: rgba(255, 0, 0, 0.103);
     }
