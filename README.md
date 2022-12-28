@@ -2,7 +2,7 @@
 dark & light mode </h2>
 
 <p align="center">Providenciando indicadores de desempenho relevantes para o seu negócio.</p>
-
+<br/>
 
 ### 📋 About the project
 
@@ -16,8 +16,8 @@ onde além de receber e exibir dados dinâmicos, também possibilitará ações 
   <img src="./github/dashboard-react.gif" alt="demo-web">  
 </div>
 
- Teste você mesmo! - [Admin Dashboard](https://admin-dashboard-alissonbms.vercel.app/)
-
+### Para uma melhor experiência, teste você mesmo - [Admin Dashboard](https://admin-dashboard-alissonbms.vercel.app/)
+---
 ### 🚀 Technologies
 
 - [React.js](https://reactjs.org/)
@@ -30,4 +30,4 @@ onde além de receber e exibir dados dinâmicos, também possibilitará ações 
 - [React Circular Progressbar](https://www.npmjs.com/package/react-circular-progressbar)
 
 ---
-👉 [See my Linkedin](https://www.linkedin.com/in/alisson-modesto-fullstack-developer/)
+### 👉 [See my Linkedin](https://www.linkedin.com/in/alisson-modesto-fullstack-developer/)
