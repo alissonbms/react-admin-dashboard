@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
+import { DriveFolderUploadOutlined } from "@mui/icons-material";
 
 //Styles
 import "./new.scss";
@@ -38,7 +38,7 @@ const New = ({ title, inputs }) => {
             <form>
               <div className="formInput formImage">
                 <label htmlFor="file">
-                  Image: <DriveFolderUploadOutlinedIcon className="icon" />
+                  Image: <DriveFolderUploadOutlined className="icon" />
                 </label>
                 <input
                   className="fileInput"

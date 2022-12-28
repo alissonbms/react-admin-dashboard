@@ -1,9 +1,12 @@
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
-import InventoryIcon from "@mui/icons-material/Inventory";
+import {
+  KeyboardArrowUp,
+  PersonOutlined,
+  AccountBalanceWalletOutlined,
+  ShoppingCartOutlined,
+  MonetizationOnOutlined,
+  Inventory,
+} from "@mui/icons-material";
+
 import { Link } from "react-router-dom";
 
 //Styles
@@ -27,7 +30,7 @@ const Widget = ({ type }) => {
           </Link>
         ),
         icon: (
-          <PersonOutlinedIcon
+          <PersonOutlined
             className="icon"
             style={{
               color: "crimson",
@@ -47,7 +50,7 @@ const Widget = ({ type }) => {
           </Link>
         ),
         icon: (
-          <InventoryIcon
+          <Inventory
             className="icon"
             style={{
               color: "teal",
@@ -63,7 +66,7 @@ const Widget = ({ type }) => {
         isMoney: false,
         link: <span className="link">See all orders</span>,
         icon: (
-          <ShoppingCartOutlinedIcon
+          <ShoppingCartOutlined
             className="icon"
             style={{
               color: "goldenrod",
@@ -79,7 +82,7 @@ const Widget = ({ type }) => {
         isMoney: true,
         link: <span className="link">See net earnings</span>,
         icon: (
-          <MonetizationOnOutlinedIcon
+          <MonetizationOnOutlined
             className="icon"
             style={{ color: "green", backgroundColor: "rgba(0, 128, 0, 0.2)" }}
           />
@@ -92,7 +95,7 @@ const Widget = ({ type }) => {
         isMoney: true,
         link: <span className="link">See details</span>,
         icon: (
-          <AccountBalanceWalletOutlinedIcon
+          <AccountBalanceWalletOutlined
             className="icon"
             style={{
               color: "purple",
@@ -116,7 +119,7 @@ const Widget = ({ type }) => {
       </div>
       <div className="right">
         <div className="percentage positive">
-          <KeyboardArrowUpIcon /> {diff}%
+          <KeyboardArrowUp /> {diff}%
         </div>
         {data.icon}
       </div>

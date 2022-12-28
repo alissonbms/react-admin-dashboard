@@ -1,10 +1,12 @@
-import MenuIcon from "@mui/icons-material/Menu";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import LogoutIcon from "@mui/icons-material/Logout";
-import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
+import {
+  DarkModeOutlined,
+  Logout,
+  WbSunnyOutlined,
+  CloseSharp,
+  MenuOpenSharp,
+} from "@mui/icons-material";
+
 import { useContext } from "react";
-import CloseSharpIcon from "@mui/icons-material/CloseSharp";
-import MenuOpenSharpIcon from "@mui/icons-material/MenuOpenSharp";
 
 //Styles
 import "./navbar.scss";
@@ -32,12 +34,12 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="logoContainer">
           {openSidebar ? (
-            <CloseSharpIcon
+            <CloseSharp
               className="menuIcon"
               onClick={() => setOpenSidebar(!openSidebar)}
             />
           ) : (
-            <MenuOpenSharpIcon
+            <MenuOpenSharp
               className="menuIcon"
               onClick={() => setOpenSidebar(!openSidebar)}
             />
@@ -48,9 +50,9 @@ const Navbar = () => {
         <div className="items">
           <div className="item">
             {darkMode ? (
-              <WbSunnyOutlinedIcon className="icon" onClick={handleLightMode} />
+              <WbSunnyOutlined className="icon" onClick={handleLightMode} />
             ) : (
-              <DarkModeOutlinedIcon className="icon" onClick={handleDarkMode} />
+              <DarkModeOutlined className="icon" onClick={handleDarkMode} />
             )}
           </div>
           <div className="item">
@@ -61,7 +63,7 @@ const Navbar = () => {
             />
           </div>
           <div className="item">
-            <LogoutIcon className="icon" />
+            <Logout className="icon" />
           </div>
         </div>
       </div>
