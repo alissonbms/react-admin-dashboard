@@ -13,10 +13,12 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 
 //Styles
 import "./sidebar.scss";
-import { useContext } from "react";
+
+//Utilities
 import { DarkModeContext } from "../../contexts/DarkModeContext";
 
 const Sidebar = () => {

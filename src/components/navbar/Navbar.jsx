@@ -2,13 +2,17 @@ import MenuIcon from "@mui/icons-material/Menu";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import LogoutIcon from "@mui/icons-material/Logout";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
-//Styles
-import "./navbar.scss";
-import { SidebarContext } from "../../contexts/SidebarContext";
 import { useContext } from "react";
-import { DarkModeContext } from "../../contexts/DarkModeContext";
 import CloseSharpIcon from "@mui/icons-material/CloseSharp";
 import MenuOpenSharpIcon from "@mui/icons-material/MenuOpenSharp";
+
+//Styles
+import "./navbar.scss";
+
+//Utilities
+import { SidebarContext } from "../../contexts/SidebarContext";
+import { DarkModeContext } from "../../contexts/DarkModeContext";
+
 const Navbar = () => {
   const { setOpenSidebar, openSidebar } = useContext(SidebarContext);
   const { dispatch, darkMode } = useContext(DarkModeContext);

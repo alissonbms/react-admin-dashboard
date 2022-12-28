@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useContext } from "react";
 
 // Styles
 import "./App.css";
@@ -10,7 +11,6 @@ import ListData from "./pages/listData/ListData";
 import Login from "./pages/login/Login";
 import New from "./pages/new/New";
 import Single from "./pages/single/Single";
-import "./styles/dark.scss";
 
 //Utilities
 import { userInputs, productInputs } from "./formSource";
@@ -20,7 +20,6 @@ import {
   userRows,
   productRows,
 } from "./datatableSource";
-import { useContext } from "react";
 import { DarkModeContext } from "./contexts/DarkModeContext";
 
 const App = () => {

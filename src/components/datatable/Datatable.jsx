@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 //Styles
 import "./datatable.scss";
 
-//Utilities
-
 const Datatable = ({ dataRows, dataColumns, title }) => {
   const actionColumn = [
     {

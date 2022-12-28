@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 //Styles
 import "./single.scss";
 
@@ -6,7 +8,8 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Chart from "../../components/chart/Chart";
 import ListTable from "../../components/listTable/ListTable";
-import { useContext } from "react";
+
+//Utilities
 import { SidebarContext } from "../../contexts/SidebarContext";
 
 const Single = () => {

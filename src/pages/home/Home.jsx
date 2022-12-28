@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 //Styles
 import "./home.scss";
 
@@ -8,7 +10,8 @@ import Widget from "../../components/widget/Widget";
 import Featured from "../../components/featured/Featured";
 import Chart from "../../components/chart/Chart";
 import ListTable from "../../components/listTable/ListTable";
-import { useContext } from "react";
+
+//Utilities
 import { SidebarContext } from "../../contexts/SidebarContext";
 
 const Home = () => {
